@@ -1,0 +1,81 @@
+comando para instalar CLI do ANGULAR
+ -> npm install -g @angular/cli
+
+(ng) roda comandos no ANGULAR
+(ng new curso-angular) cria projeto
+
+Aula 2 
+(ng serve) roda o projeto no navegador
+
+
+Aula 3 - Entendendo estrutura do angular
+node_modules: dependencias do projetos (pasta descartavel)
+scr: onde vamos programar a aplicação
+src/app: pasta principal para componentes, services e etc.
+componentes: dividos partes TS, HTML, CSS e testes
+
+
+Aula 4 - Criando componente
+ng generate component components/first-component
+ng generate <nome> CRIA UM NOVO COMPONENTE.
+
+Aula 5 - Interpolação de dados
+dentro do arquivo ts do componente em export class componente, crio as propriedades.
+imprimir propriedade {{ dado }}
+
+Aula 6 - CSS no angular
+Estilo Global fica em styles.css 
+SCOPED: estilos a nivel de componente, não vaza para os outros componentes
+
+Aula 7 - Compartilhar dados entre componentes
+Disponibilizar na chamada do componente o nome do dado que será recebido com a seguinte sintaxe: [dado];
+no codigo .ts do componente filho, vamos utilizar o decorator @input, que tem como papel entregar o dado para o template.
+
+Aula 8 - Diretivas
+Realiza diversas funções no sistema
+Sempre começa com ng, exemplo [ngAlgumaCoisa]
+
+Aula 9 - Renderização condicional no Angular
+uso da diretiva ngif e / else precisa do ng-template
+
+Aula 10 - Eventos
+sintaxe: (click)="algumaFuncao()"
+
+Aula 11 - Emitir Eventos
+@Output faz a saida do Eventos
+(emit)="onEmit()"
+
+Aula 12 - Renderização de listas
+loop em listas
+*ngFor="let item of items"
+
+Aula 13 - Importancia da interfaces
+Padroniza e facilita a manutenção
+colocar interface na pasta App
+Exemplo: export interface nameInterface {}
+
+Aula 14 - Pipe Operator
+recursos  para trabalhar com strins nos templates.
+Sintaxe: {{ dado | algumPipeOperator }}
+Isso poupa regras CSS ou manipulação de strins com JS
+
+Aula 15 - Two way data binding
+recurso para trabalhar com formularios
+-importar FormModule no componente principal
+declarar o [(ngModel)] no input e preencher o atributo name, todos com o mesmo valor
+
+Aula 16 - Servicese
+É onde ficam as requisições para as APIs
+ng generate service <nome>
+importar no componente e iniciar no constructor;
+
+Aula 17 - Angular Router
+Criar novo arquivo só para rotas
+nesse aquivo importar o RouterMOdeles e Router
+importar no app.modules.ts
+substituir componentes por <router-outlet>
+
+Aula 18 - Requisições HTTP
+Importar dois pacotes: HttpClient e HttpHeaders
+simular api local com json-server
+Inicializar o módulo HttpClientModule
